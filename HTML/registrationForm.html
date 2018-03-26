@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;  
+            color: white;
+        }
+        form {
+            padding: 1em;
+            background-color:mediumslateblue;
+            width:fit-content;            
+        }
+        h1{
+            color: mediumslateblue;
+        }                 
+    </style>
+</head>
+<body>
+    <center>
+    <h1><u>Student Registration Form</u></h1>
+    <form>
+            <table>
+                <tr>
+                    <td>FIRST NAME</td>
+                    <td colspan="2"><input type="text">(max 30 characters a-z and A-Z)</td>
+                    
+                </tr>
+                <tr>
+                    <td>LAST NAME</td>
+                    <td colspan="2"><input type="text">(max 30 characters a-z and A-Z)</td>
+                </tr>
+                <tr>
+                    <td>DATE OF BIRTH</td>
+                    <td>
+                        <select name="Day"><option disabled selected>Day :</option></select>
+                        <select name="Month"><option disabled selected>Month :</option></select>
+                        <select name="Year"><option disabled selected>Year :</option></select>
+                    </td>                    
+                </tr>
+                <tr>
+                        <td>EMAIL ID</td>
+                        <td colspan="2"><input type="text"></td>           
+                </tr>
+                <tr>
+                        <td>MOBILE NUMBER</td>
+                        <td colspan="2"><input type="text"></td>          
+                </tr>
+                <tr>
+                        <td>GENDER</td>
+                        <td><input type="radio" name="gender" value="male" checked>Male</input>
+                            <input type="radio" name="gender" value="female">Female</input> </td>
+                        
+                </tr>
+                <tr>
+                    <td valign="top">ADDRESS</td>
+                    <td><textarea cols="50" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td>CITY</td>
+                    <td colspan="2"><input type="text">(max 30 characters a-z and A-Z)</td>
+                    
+                </tr>
+                <tr>
+                    <td>PIN CODE</td>
+                    <td colspan="2"><input type="text">(6 digit number)</td>
+                    
+                </tr>
+                <tr>
+                    <td>STATE</td>
+                    <td colspan="2"><input type="text">(max 30 characters a-z and A-Z)</td>
+                    
+                </tr>
+                <tr>
+                    <td>COUNTRY</td>
+                    <td colspan="2"><input type="text"></td>
+                    
+                </tr>
+                <tr>
+                    <td>HOBBIES</td>
+                    <td>
+                        Drawing<input type="checkbox" name="drawing">
+                        Singing<input type="checkbox" name="singing">
+                        Dancing<input type="checkbox" name="dancing">
+                        Sketching<input type="checkbox" name="sketching">
+                    </td>
+                </tr>                
+                <tr>
+                    <td></td>
+                    <td>
+                        Others<input type="checkbox" name="sketching">
+                        <input type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">QUALIFICATION</td>
+                    <td colspan="5">
+                        <table>
+                            <tr>
+                                <th>St.No</th>
+                                <th>Examination</th>
+                                <th>Board</th>
+                                <th>Percentage</th>
+                                <th>Year of Passing</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Class X</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Class XIII</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Graduation</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Masters</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>(10 char max)</td>
+                                <td>(upto 2 decimal)</td>                 
+                            </tr>                            
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>COURSES</td>
+                </tr>
+                <tr>
+                    <td>APPLIED FOR</td>
+                    <td>
+                        <input type="radio" name="course" value="BCA" checked>BCA</input>
+                        <input type="radio" name="course" value="B.Com">B.Com</input>
+                        <input type="radio" name="course" value="B.Com">B.Com</input>
+                        <input type="radio" name="course" value="B.Sc">B.Sc</input>
+                        <input type="radio" name="course" value="B.A">BA</input> 
+                    </td>
+                </tr>                
+            </table>
+            
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+    </center>
+</body>
+</html>

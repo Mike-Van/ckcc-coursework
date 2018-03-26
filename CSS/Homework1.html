@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> 
+    <style>
+        body{
+            font-family: 'Titillium Web', sans-serif;
+            margin:0;
+        }
+        .header{
+            background-color: black;    
+            color: floralwhite;
+            padding-left: 2.5em;        
+            margin-top: 0;
+        }
+        .header h3{
+            color: gray;
+            font-size: 1em;
+            margin-top: -1em;
+            margin-bottom: 0;
+            padding-bottom: 1em;
+        }
+        .header h1{
+            margin-bottom: 0;
+            margin-top: 0;
+            font-size: 4em;
+        }
+        .navigation-bar{
+            background-color: rgb(56, 56, 56);
+                       
+        }
+        .navigation-bar ul{
+            margin-top: 0;
+        }
+        .navigation-bar ul li{
+            display: inline-block;
+            padding-right: 40px;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+        .navigation-bar ul li a{
+            color: rgb(168, 168, 168);
+            text-decoration: none;
+        }
+        .container{
+            margin: 1%;
+        }
+        .body-left, .body-right {
+            display: inline-block;
+        }
+        .body-left{
+            width: 62%;
+            margin-right: 1%;
+        }
+        .body-right{
+            width: 34%;
+            margin-left: 1%;
+            vertical-align: top;
+        }
+        .body-left h1, .body-right .heading-right{
+            margin-top: 0;
+        }
+        .body-left h1{
+            font-weight: 900;
+        }
+        .body-right .heading-right{
+            color: white;
+            background-color:rgb(21, 164, 247);
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            padding-left: 0.5em;            
+        }
+        .body-right div{
+            margin-bottom: 2em;
+        }
+        .body-right a{
+            display: block;
+            color:rgb(75, 72, 72);
+            padding-bottom: 1em;
+        }
+        .body-right input{            
+            width: 99%;
+            height: 2em;
+        }
+        .button{
+            background-color: rgb(21, 164, 247);
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            font-weight: bolder;
+            border-radius: 8px;
+        }
+        .links-group{
+            background-color: rgb(49, 48, 48);
+            padding-left: 2%;
+            padding-right: 2%;            
+        }
+        .links-column{
+            display: inline-block;
+            width: 32%;
+        }
+        .links-column h3{
+            color: rgb(21, 164, 247);
+        }
+        .links-column ul{
+            list-style: none;
+            padding-left: 0;
+        }
+        .links-column a{
+            color: rgb(102, 102, 102);
+            padding-bottom: 1em;
+        }
+        .copyright {
+            text-align: center;
+            background-color: black;
+            color: rgb(83, 83, 83);
+            margin: 0;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+        .copyright b {
+            color:rgb(168, 168, 168);
+        }
+        .body-left h1{
+            margin-bottom: 0;
+        }
+        .body-left .post-detail {
+            margin-top: -0.5em;
+        }
+        .body-left h3{
+            color: rgb(21, 164, 247);
+        }
+        .link {
+            color: rgb(21, 164, 247);
+        }
+        #active {
+            font-weight: 900;
+            color: white;
+        }
+        #logo {
+            color: rgb(21, 164, 247);
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>company<span id="logo">name</span></h1>
+        <h3>your website slogan here</h3>
+    </div>
+    <div class="navigation-bar">
+        <ul>
+            <li>
+                <a id="active" href="#">HOME</a>
+            </li>
+            <li>
+                <a href="#">EXAMPLES</a>
+            </li>
+            <li>
+                <a href="#">PROJECTS</a>
+            </li>
+            <li>
+                <a href="#">SOLUTIONS</a>
+            </li>
+            <li>
+                <a href="#">CONTACT</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="body-left">
+            <h1>Introduction to bizblue</h1>
+            <p class="post-detail">
+                <i>Posted on 14 May by
+                    <u>Joe Biser</u>
+                </i>
+            </p>
+            <p>
+                Welcome to bizblue, a free premium valid CSS3 & HTML5 web template from ZyPOP. This template is completely free
+                to use permitting a link remains back to
+                <a class="link" href="http://zypopwebtemplate.com">http://zypopwebtemplate.com</a>> Should you wish to use this template unbranded you can buy a template license
+                from our website for 8.00 GBP, this will allow you remove all branding related tou our site, for more information
+                about this, see below.</p>
+            <p>
+                This template has been tested in:
+            </p>
+            <ul>
+                <li>Firefox</li>
+                <li>Opera</li>
+                <li>IE</li>
+                <li>Safari</li>
+                <li>Chrome</li>
+            </ul>
+            <br/>
+            <div class="button-group">
+                <a class="button" href="#">READ MORE</a>
+                <a class="button" href="#">COMMENTS</a>
+            </div>
+            <br/>
+
+            <h1>Buy unbranded</h1>
+            <i>Posted on 14 May by
+                <u>Joe Biser</u>
+            </i>
+            <p>
+                Purchasing a template license for 8.00 GBP (at time of writing around 12 USD) gives you the right to remove any branding including links, logos and source tags relating to ZyPOP. As well sa waiving the attribution requirement, your payment will also help us provie continued support or users as well as creating new wen templates. Find out more about how to buy at the licensing page on our website which can be accessed at <a href="#" class="link">http://zypopwebtemplates.com/licensing</a>
+            </p>
+            <br/>
+            <h3>Lorem lipsum</h3>
+            <p>
+                    Lorem ipsum dolor sit amet, sapien interdum sollicitudin dis ligula adipisci feugiat, ante rhoncus, aliquam consequat adipiscing felis, lacus nonummy ultrices suspendisse dolor et, vulputate sed. Leo magnis augue, eros eget magna hac rutrum. Vel eget maecenas leo mattis dignissim, elit nullam. Nunc erat suscipit sit fusce vitae, lacus eros mi wisi vivamus odio. Libero porttitor rhoncus quam nulla, donec est lobortis dolor eu ultricies vehicula. Non etiam, aenean mauris elit nec, urna justo amet arcu. Inceptos quisque, integer ultrices eros in aliquam faucibus, habitasse aenean deserunt interdum hac felis. Quis tortor faucibus sed, eleifend sit vivamus fusce magna iaculis elit, sociosqu nec maecenas non lacinia, dis ut. Augue morbi mauris vivamus, erat vivamus egestas turpis a, vivamus auctor ut necessitatibus vitae, tellus ac imperdiet nec neque ultrices. Vivamus rutrum arcu mollis massa, mi neque tincidunt, volutpat eu neque quam, volutpat neque morbi.
+            </p>
+            <br/>
+            <div class="button-group">
+                <a class="button" href="#">READ MORE</a>
+                <a class="button" href="#">COMMENTS</a>
+            </div>
+            <br/>
+        </div>
+
+        <div class="body-right">
+            <div>
+                <p class="heading-right">Categories</p>
+                <a href="#">Home Page</a>
+                <a href="#">Style Examples</a>
+                <a href="#">Commodo vestibulum sem matis</a>
+                <a href="#">Sed aliquam libero ut velit</a>
+                <a href="#">Maecebas velit vaite</a>
+            </div>
+            <div>
+                <p class="heading-right">About Us</p>
+                <p>Aenean nec massa a tortor auctor dssaje dsafkkja lkdjflkj. roin at velit vel arcu pretum luctus. <a href="#">Read More >></a></p>
+            </div>
+            <div>
+                <p class="heading-right">Search Site</p>
+                <input type="text" />
+            </div>
+            <div>
+                <p class="heading-right">Helpful Links</p>
+                <a href="#">Premium HTML web templates rom 10$</a>
+                <a href="#">Cheap web hosting from Dreamhost</a>
+                <a href="#">Premium Wordpres themes</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="links-group">
+            <div class="links-column">
+                <h3>Proin accumsan</h3>
+                <ul>
+                    <li><a  href="#">fdsaerw dslkajr</a></li>
+                    <li><a href="#">fdsaerw dslkajr</a></li>
+                    <li><a href="#">fdsaerw dslkajr</a></li>
+                    <li><a href="#">fdsaerw dslkajr</a></li>
+                </ul>
+            </div>
+            <div class="links-column">
+                <h3>Proin accumsan</h3>
+                <ul>
+                    <li><a href="#">fdsaerw dslkajr</a></li>
+                    <li><a href="#">fdsaerw dslkajr</a></li>
+                    <li><a href="#">fdsaerw dslkajr</a></li>
+                    <li><a href="#">fdsaerw dslkajr</a></li>
+                </ul>
+            </div>
+            <div class="links-column">
+                <h3>Proin accumsan</h3>
+                <ul>
+                    <li><a href="#">fdsaerw dslkajr</a></li>
+                    <li><a href="#">fdsaerw dslkajr</a></li>
+                    <li><a href="#">fdsaerw dslkajr</a></li>
+                    <li><a href="#">fdsaerw dslkajr</a></li>
+                </ul>
+            </div>              
+            
+        </div>
+        <div class="copyright">
+            <p>&copy; YourSite 2013. <b><u>Free CSS Website Templates</u></b> by ZyPOP</p>
+        </div>
+    </footer>
+</body>
+
+</html>
