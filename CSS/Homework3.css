@@ -16,6 +16,7 @@ i{
 }
 .logo, .nav-menu {
     display: inline-block;
+    vertical-align: middle;
 }
 .logo {
     width: 30%;
@@ -24,6 +25,20 @@ i{
     width: 69%;
     text-align: right;
 }
+.nav-menu ul{
+    margin: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.nav-menu a{
+    font-weight: bolder;
+}
+
+.navbar .nav-menu ul li a:hover{
+    color: #DF0C31;
+    text-decoration-line: underline;
+    transition-duration: 200ms;
+}   
 .navbar .nav-menu ul li{
     display: inline-block;
     padding-right: 1em;
@@ -48,6 +63,10 @@ i{
     color: white;
     font-weight: normal ;
 }
+.left-main p{
+    margin-bottom: 2em;
+    line-height: 150%;
+}
 .button-readmore{
     text-decoration: none;
     color: white;
@@ -56,6 +75,7 @@ i{
     padding-bottom: 0.5em;
     padding-left: 3em;
     padding-right: 3em;
+    margin-top: 1.5em;
 }
 .about{
     background-color: #FCFCFC;
@@ -110,6 +130,7 @@ i{
     padding-left: 2em;
     padding-right: 2em;
 }
+
 .portfolio img{
     width: 25%;
     float: left;    
@@ -213,4 +234,30 @@ i{
 .footer a{
     text-decoration: none;
     color: #DF0C31;
+}
+.left-about p{
+    line-height: 150%;
+}
+.services {
+    text-align: center;
+}   
+.active{
+    color: #DF0C31 !important;
+    border-color: #DF0C31 !important;
+}
+.portfolio ul li a:hover, .button-contact:hover{
+    color: #EFEFEF !important;
+    background-color: #DF0C31;
+    border: 1px solid #DF0C31;
+    transition-duration: 200ms;
+}
+.left-main a:hover{
+    background-color: #EFEFEF;
+    color: #DF0C31;
+    border:1px solid white;
+    transition-duration: 200ms;
+}
+.contact h1{
+    padding-top: 2.5em;
+    padding-bottom: 2em;
 }
