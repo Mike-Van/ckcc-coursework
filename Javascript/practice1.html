@@ -5,63 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Javascript - Calculator</title>
+    <link rel="stylesheet" href="practice1.css" />
 </head>
 <body>
     <form>
-        <input type="text" placeholder="0" id="input">
+        <input type="text" class="input" placeholder="0" id="input">
         <div>
-            <input type="button" value="1" onclick="number(1)">
-            <input type="button" value="2" onclick="number(2)">
-            <input type="button" value="3" onclick="number(3)">
-            <input type="button" value="+" onclick="operation('+')">
+            <input type="button" class="button-white" value="AC" onclick="operation('AC')">
+            <input type="button" class="button-white" value="+/-" onclick="operation('+/-')">
+            <input type="button" class="button-white" value="%" onclick="operation('%')">
+            <input type="button" class="button-orange" value="/" onclick="operation('/')">
         </div>
         <div>
-            <input type="button" value="4" onclick="number(4)">
-            <input type="button" value="5" onclick="number(5)">
-            <input type="button" value="6" onclick="number(6)">
-            <input type="button" value="-" onclick="operation('-')">
+            <input type="button" class="button-white" value="7" onclick="number(7)">
+            <input type="button" class="button-white" value="8" onclick="number(8)">
+            <input type="button" class="button-white" value="9" onclick="number(9)">
+            <input type="button" class="button-orange" value="*" onclick="operation('*')">
         </div>
         <div>
-            <input type="button" value="7" onclick="number(7)">
-            <input type="button" value="8" onclick="number(8)">
-            <input type="button" value="9" onclick="number(9)">
-            <input type="button" value="*" onclick="operation('*')">
+            <input type="button" class="button-white" value="4" onclick="number(4)">
+            <input type="button" class="button-white" value="5" onclick="number(5)">
+            <input type="button" class="button-white" value="6" onclick="number(6)">
+            <input type="button" class="button-orange" value="-" onclick="operation('-')">
         </div>
         <div>
-            <input type="button" value="." onclick="number('.')">
-            <input type="button" value="0" onclick="number(0)">
-            <input type="button" value="=" onclick="operation('=')">
-            <input type="button" value="/" onclick="operation('/')">
+            <input type="button" class="button-white" value="1" onclick="number(1)">
+            <input type="button" class="button-white" value="2" onclick="number(2)">
+            <input type="button" class="button-white" value="3" onclick="number(3)">
+            <input type="button" class="button-orange" value="+" onclick="operation('+')">
+        </div>
+        <div>
+            <input type="button" class="button-white button-0" value="0" onclick="number(0)">
+            <input type="button" class="button-white" value="." onclick="number('.')">            
+            <input type="button" class="button-orange" value="=" onclick="operation('=')">
         </div>
         
         <script type="text/javascript">
             function number(num){
                 input.value += num
             }
+            /*
             function calculate(){
                 input.value = eval(input.value)
             } 
+            */
             var num1, num2, sign
             function operation(op){
                 if(op == "+"){
-                    num1 = parseInt(input.value)
+                    num1 = Number(input.value)
+                    sign = op
                     input.value = ""
+                    
                 }
                 if(op == "-"){
-                    num1 = parseInt(input.value)
+                    num1 = Number(input.value)
+                    sign = op
                     input.value = ""
                 }
                 if(op == "*"){
-                    num1 = parseInt(input.value)
+                    num1 = Number(input.value)
+                    sign = op
                     input.value = ""
                 }
                 if(op == "/"){
-                    num1 = parseInt(input.value)
+                    num1 = Number(input.value)
+                    sign = op
                     input.value = ""
                 }
+                if(op == "AC"){
+                    input.value = ""
+                }
+                if(op == "+/-"){
+                    input.value = Number(input.value) * -1
+                }
+                if(op == "%"){
+                    num1 = Number(input.value)
+                    sign = op
+                    input.value = ""
+                }
+
                 if(op == "="){
-                    num2 = parseInt(input.value)
-                    input.value = num1 + num2
+                    num2 = Number(input.value)
+                    //console.log(num1, num2, sign)
+                    if(sign == '+') input.value = num1 + num2
+                    if(sign == '-') input.value = num1 - num2
+                    if(sign == '*') input.value = num1 * num2
+                    if(sign == '/') input.value = num1 / num2
+                    if(sign == '%') input.value = num1 % num2
                 }
 
             }

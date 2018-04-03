@@ -1,0 +1,36 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.button-white, .button-orange{
+    font-size: 150%;
+    width: 2em;
+    height: 2em;
+    background-color: #E0E0E0;
+    border: 1px solid #ADADAD;
+    float: left;
+}
+.input{
+    font-size: 200%;
+    width: 5.75em;
+    text-align: right;
+    color: #FFFFFF;
+    background: linear-gradient(300deg, #684848, #9A8B90);
+    border: none;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-right: 0.25em;
+}
+.input::placeholder{
+    color: #FFFFFF;
+}
+.button-orange{
+    background-color: #ED9649;
+    color: #FFFFFF;
+}
+.button-0{
+    width: 4em;
+}
+div{
+    clear: both;
+}
+
