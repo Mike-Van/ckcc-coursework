@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript - ToDoList</title>
+</head>
+<body>
+    <form>
+        <div>
+            <input type="text" id="task" />
+            <input type="button" id="addTask" value="Add" onclick="addTask()">
+        </div>
+        <div>
+            <input type="button" id="rmvTask" value="Remove Task" onclick="rmvTask()" />
+            <input type="button" id="rmvAll" value="Remove All" onclick="rmvAll()" />
+            <input type="button" id="sort" value="Sort"onclick="sort()" />
+        </div>
+        <select id="tasksLst">    
+        </select>
+    </form>
+    
+    <script type="text/javascript">
+        tasks = []
+        function addTask(){
+            tasks.push(task.value)
+            console.log(tasks)
+        }
+    </script>
+</body>
+</html>

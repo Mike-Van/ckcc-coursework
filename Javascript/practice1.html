@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript - Calculator</title>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="0" id="input">
+        <div>
+            <input type="button" value="1" onclick="number(1)">
+            <input type="button" value="2" onclick="number(2)">
+            <input type="button" value="3" onclick="number(3)">
+            <input type="button" value="+" onclick="operation('+')">
+        </div>
+        <div>
+            <input type="button" value="4" onclick="number(4)">
+            <input type="button" value="5" onclick="number(5)">
+            <input type="button" value="6" onclick="number(6)">
+            <input type="button" value="-" onclick="operation('-')">
+        </div>
+        <div>
+            <input type="button" value="7" onclick="number(7)">
+            <input type="button" value="8" onclick="number(8)">
+            <input type="button" value="9" onclick="number(9)">
+            <input type="button" value="*" onclick="operation('*')">
+        </div>
+        <div>
+            <input type="button" value="." onclick="number('.')">
+            <input type="button" value="0" onclick="number(0)">
+            <input type="button" value="=" onclick="operation('=')">
+            <input type="button" value="/" onclick="operation('/')">
+        </div>
+        
+        <script type="text/javascript">
+            function number(num){
+                input.value += num
+            }
+            function calculate(){
+                input.value = eval(input.value)
+            } 
+            var num1, num2, sign
+            function operation(op){
+                if(op == "+"){
+                    num1 = parseInt(input.value)
+                    input.value = ""
+                }
+                if(op == "-"){
+                    num1 = parseInt(input.value)
+                    input.value = ""
+                }
+                if(op == "*"){
+                    num1 = parseInt(input.value)
+                    input.value = ""
+                }
+                if(op == "/"){
+                    num1 = parseInt(input.value)
+                    input.value = ""
+                }
+                if(op == "="){
+                    num2 = parseInt(input.value)
+                    input.value = num1 + num2
+                }
+
+            }
+        </script>
+    </form>
+</body>
+</html>
