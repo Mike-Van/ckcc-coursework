@@ -4,28 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>javascript - ToDoList</title>
+    <title>Javascript - ToDoList</title>
+    <style>
+        select{
+            width: 15em;
+        }
+        div{
+            padding-bottom: 0.25em;
+        }
+    </style>
 </head>
 <body>
-    <form>
-        <div>
-            <input type="text" id="task" />
-            <input type="button" id="addTask" value="Add" onclick="addTask()">
-        </div>
-        <div>
-            <input type="button" id="rmvTask" value="Remove Task" onclick="rmvTask()" />
-            <input type="button" id="rmvAll" value="Remove All" onclick="rmvAll()" />
-            <input type="button" id="sort" value="Sort"onclick="sort()" />
-        </div>
-        <select id="tasksLst">    
-        </select>
-    </form>
+    <div>
+        <input type="text" class="input" placeholder="Name" id="input">
+        <input type="button" id="input" class="button-white" value="Add" onclick="Add()">
+    </div>
     
+    <div>
+        <input type="button" class="button-white" value="Remove" onclick="Remove()">
+        <input type="button" class="button-white" value="Remove All" onclick="RemoveAll()">
+        <input type="button" class="button-white" value="Sort" onclick="Sort()">
+    </div>
+    <div>
+        <select id="tasks" multiple >
+            
+        </select>
+    </div>
+
     <script type="text/javascript">
-        tasks = []
-        function addTask(){
-            tasks.push(task.value)
-            console.log(tasks)
+        var TasksList = new Array()
+        function Add(){
+            taskname = document.getElementById("input")
+            if(taskname.value == "") return
+            TasksList.push(taskname.value) 
+            refreshList();
+            taskname.value = ""          
+        }
+        function Remove(){
+            selected = document.getElementById("tasks").selectedIndex
+            TasksList.splice(selected, 1)
+            refreshList();
+            console.log(TasksList)
+        }
+        function RemoveAll(){
+            var list = document.getElementById("tasks");
+            list.options.length = 0
+            TasksList.length = 0;
+            console.log(list.options.length, TasksList.length)
+        }
+        function Sort(){
+            TasksList.sort()
+            refreshList()
+        }
+
+        function refreshList(){
+            //clear list
+            list = document.getElementById("tasks")
+            for (i = 0; i < list.options.length; i++)
+                list.options[i] = null
+            
+            //re-add items from array
+            for (i = 0; i < TasksList.length; i++){
+                var option = document.createElement("option")
+                option.text = TasksList[i]
+                list.options[i] = option
+            }
         }
     </script>
 </body>
