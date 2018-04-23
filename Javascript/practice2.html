@@ -44,13 +44,13 @@
             selected = document.getElementById("tasks").selectedIndex
             TasksList.splice(selected, 1)
             refreshList();
-            console.log(TasksList)
+            //console.log(TasksList)
         }
         function RemoveAll(){
             var list = document.getElementById("tasks");
             list.options.length = 0
             TasksList.length = 0;
-            console.log(list.options.length, TasksList.length)
+            //console.log(list.options.length, TasksList.length)
         }
         function Sort(){
             TasksList.sort()
@@ -60,8 +60,8 @@
         function refreshList(){
             //clear list
             list = document.getElementById("tasks")
-            for (i = 0; i < list.options.length; i++)
-                list.options[i] = null
+            list.innerHTML = ""
+            
             
             //re-add items from array
             for (i = 0; i < TasksList.length; i++){

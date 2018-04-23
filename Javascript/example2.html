@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        p1 = {
+            x:0,
+            y:0
+        }
+        p2 = {
+            x:100,
+            y:0
+        }
+        */
+        function Point(a, b){
+            this.x = a
+            this.y = b
+        }
+        p1 = new Point(0,0)
+        p2 = new Point(0,100)
+
+        function Distance(a, b) {
+            return Math.sqrt((b.x-a.x)^2 + (b.y-a.y)^2)
+        }
+        document.write(Distance(p1, p2))
+
+        car = {
+            myCar : "Toyota",
+            7 : "Camry"
+        }
+        var colors = new Array();
+        colors[0] = "red";
+        colors[2] = "blue";
+        colors["fav"] = "green";
+
+    </script>
+</body>
+</html>
