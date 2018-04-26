@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript - Note</title>
+    <style>
+        .note {
+            display: inline-block;
+            background-color:sandybrown;
+            width:auto;
+            margin-right: 10px;     
+            vertical-align: middle;
+            text-align: center;
+            margin-bottom: 10px;          
+        }
+        p {
+            font-size: 150%;
+            font-weight: bolder;   
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        .button-close {
+            float: right;
+            margin-left:1em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" class="input" placeholder="Name" id="input">
+        <input type="button" id="input" class="button-white" value="Add Note" onclick="Add()">
+    </div>
+    <div id="tasks">
+
+    </div>
+    
+
+    <script type="text/Javascript">
+        var TasksList = new Array()
+        function Add(){
+            taskname = document.getElementById("input")
+            if(taskname.value == "") return
+            TasksList.push(taskname.value) 
+            refreshList();
+            taskname.value = ""
+            taskname.focus()          
+        }
+        function Remove(item){
+            //selected = document.getElementByClass("note")[i].innerText
+            TasksList.splice(item, 1)
+            refreshList();
+        }
+
+        function refreshList(){
+            //clear list
+            list = document.getElementById("tasks")
+            list.innerHTML = ""
+            
+            //re-add items from array
+            for (i = 0; i < TasksList.length; i++){
+                var e = document.createElement('div');
+                e.setAttribute("class", "note");
+                closeHTML = '<input type="button" class="button-close" value="X" onclick="Remove(' + i + ')">'
+                taskHTML = "<p>" + TasksList[i] + "</p>";
+                e.innerHTML = closeHTML + taskHTML;
+                tasks.appendChild(e);
+                /*
+                option.text = TasksList[i]
+                list.options[i] = option
+                */
+            }
+        }
+    </script>
+</body>
+</html>
